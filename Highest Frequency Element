@@ -1,0 +1,7 @@
+arr = [int(x) for x in input().split()]
+c=0
+for i in arr:
+    if(arr.count(i)>c):
+        c=arr.count(i)
+        b=i 
+print("Highest Frequency Element: ",b)
