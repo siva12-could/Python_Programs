@@ -1,0 +1,10 @@
+// Maximum possible difference between two subsets of an array
+lst=[int(x) for x in input().split()]
+c=0
+s=0
+for i in lst:
+    if(lst.count(i)<2 and i>=0):
+        c=c+i
+    elif(lst.count(i)<2 and i<=0):
+        s=s+i 
+print(c-s)
