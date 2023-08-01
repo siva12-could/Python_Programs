@@ -1,0 +1,51 @@
+// Alternate Even Odd Series
+
+a = input()
+special_char="[@_!#$%^&*()<>?/\|}{~:]"
+c=0
+l=[]
+even = []
+odd = []
+d=""
+for i in a:
+    if i in special_char:
+        c+=1
+for i in range(len(a)):
+    
+    if(a[i].isdigit()):
+        l.append(a[i])
+for i in range(len(l)):
+    if(int(l[i])%2==0):
+        even.append(l[i])
+    else:
+        odd.append(l[i])
+if(c%2==0):
+    if(len(even)<len(odd)):
+        for i in range(len(even)):
+            d=d+even[i]
+            d=d+odd[i]
+        for i in range(len(even),len(odd)):
+            d=d+odd[i]
+    else:
+        for i in range(len(odd)):
+            
+            d=d+even[i]
+            d=d+odd[i]
+        for i in range(len(odd),len(even)):
+            d=d+even[i]
+else:
+    if(len(odd)<len(even)):
+        for i in range(len(odd)):
+            d=d+odd[i]
+            d=d+even[i]
+        for i in range(len(odd),len(even)):
+            d=d+even[i]
+    else:
+        for i in range(len(even)):
+            
+            d=d+odd[i]
+            d=d+even[i]
+        for i in range(len(even),len(odd)):
+            d=d+odd[i]
+    
+print(d)
